@@ -58,10 +58,6 @@
                                 </div>
                             </li>
                             <li>
-                                <div id="CategoryFacet">
-                                </div>
-                            </li>
-                            <li>
                                 <div id="Locations/NameFacet">
                                 </div>
                             </li>
@@ -75,10 +71,6 @@
                             </li>
                             <li>
                                 <div id="People/NameFacet">
-                                </div>
-                            </li>
-                            <li>
-                                <div id="Tags/NameFacet">
                                 </div>
                             </li>
                         </div>
@@ -128,12 +120,10 @@
     var endDate = new Date();
     automagic.addRangeFacet("PublishDateFacet", "PublishDate", "date", startDate, endDate);
    automagic.addCheckboxFacet("Authors/ArticleAuthor/NameFacet", "Authors/ArticleAuthor/Name", "string");
-   automagic.addCheckboxFacet("CategoryFacet", "Category", "string");
    automagic.addCheckboxFacet("Locations/NameFacet", "Locations/Name", "string");
    automagic.addCheckboxFacet("Commodities/NameFacet", "Commodities/Name", "string");
    automagic.addCheckboxFacet("Organisations/NameFacet", "Organisations/Name", "string");
    automagic.addCheckboxFacet("People/NameFacet", "People/Name", "string");
-   automagic.addCheckboxFacet("Tags/NameFacet", "Tags/Name", "string");
 
 
     // Adds a button to clear any applied filters
@@ -141,4 +131,4 @@
 </script>
 <style>
 </style>
-</html>azsearchjsApp.html
+</html>
