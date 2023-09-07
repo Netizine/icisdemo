@@ -105,7 +105,7 @@
     // Initialize and connect to your search service
     var automagic = new AzSearch.Automagic({ index: "icis-articles-idx", queryKey: "O6NkCNa6HEfpL1LpVsaz36KF3IqxMPDifAe9qGZjzvAzSeB07eLd", service: "netizinesearch", dnsSuffix:"search.windows.net" });
     
-    const resultTemplate = `<div class="col-xs-12 col-sm-9 col-md-9"><h4>{{Title}}</h4><div class="resultDescription">{{{Summary}}}</div></div>`;
+    const resultTemplate = `<div class="col-xs-12 col-sm-9 col-md-9"><a href="{{Url}}"><h4>{{Title}}</h4></a><div class="resultDescription">{{{Summary}}}</div></div>`;
 
     // add a results view using the template defined above
     automagic.addResults("results", { count: true }, resultTemplate);
@@ -116,7 +116,7 @@
         automagic.addSearchBox("searchBox");
         
        var startDate = new Date();
-    startDate.setFullYear(1975);
+    startDate.setFullYear(2022);
     var endDate = new Date();
     automagic.addRangeFacet("PublishDateFacet", "PublishDate", "date", startDate, endDate);
    automagic.addCheckboxFacet("Authors/ArticleAuthor/NameFacet", "Authors/ArticleAuthor/Name", "string");
